@@ -1,0 +1,656 @@
+{
+     "books": {
+          "9780061120084": {
+               "title": "To Kill a Mockingbird",
+               "author": "Harper Lee",
+               "author_nationality": "American",
+               "year_written": 1960,
+               "page_count": 281,
+               "category": "Classic",
+               "languages": [
+                    "English",
+                    "Hungarian"
+               ],
+               "availability": "rented",
+               "rental_history": [
+                    {
+                         "user_id": [
+                              "Marton Mester",
+                              12345
+                         ],
+                         "rental_date": "2024-04-20",
+                         "return_date": "2024-04-25"
+                    },
+                    {
+                         "user_id": [
+                              "Mester Marton",
+                              84812
+                         ],
+                         "rental_date": "2024-06-02",
+                         "return_date": "2024-06-02"
+                    },
+                    {
+                         "user_id": [
+                              "Mester Marton",
+                              52568
+                         ],
+                         "rental_date": "2024-06-02",
+                         "return_date": "2024-06-02"
+                    },
+                    {
+                         "user_id": [
+                              "Jack Sparrow",
+                              49484
+                         ],
+                         "rental_date": "2024-06-02",
+                         "return_date": "2024-06-02"
+                    },
+                    {
+                         "user_id": [
+                              "Marton Mester",
+                              42361
+                         ],
+                         "rental_date": "2024-06-04",
+                         "return_date": null
+                    }
+               ]
+          },
+          "9780451524935": {
+               "title": "1984",
+               "author": "George Orwell",
+               "author_nationality": "British",
+               "year_written": 1949,
+               "page_count": 328,
+               "category": "Dystopian",
+               "languages": [
+                    "English",
+                    "Spanish",
+                    "French"
+               ],
+               "availability": "rented",
+               "rental_history": [
+                    {
+                         "user_id": [
+                              "Takacs Judit",
+                              67890
+                         ],
+                         "rental_date": "2024-03-15",
+                         "return_date": "None"
+                    }
+               ]
+          },
+          "9780590353427": {
+               "title": "Harry Potter and the Philosopher's Stone",
+               "author": "J.K. Rowling",
+               "author_nationality": "British",
+               "year_written": 1997,
+               "page_count": 309,
+               "category": "Fantasy",
+               "languages": [
+                    "English",
+                    "Spanish",
+                    "French",
+                    "German",
+                    "Hungarian"
+               ],
+               "availability": "available",
+               "rental_history": [
+                    {
+                         "user_id": [
+                              "Emma Watson",
+                              24680
+                         ],
+                         "rental_date": "2024-04-15",
+                         "return_date": "2024-04-26"
+                    },
+                    {
+                         "user_id": [
+                              "Mester Marton",
+                              84812
+                         ],
+                         "rental_date": "2024-06-02",
+                         "return_date": "2024-06-02"
+                    },
+                    {
+                         "user_id": [
+                              "Mester Marton",
+                              52568
+                         ],
+                         "rental_date": "2024-06-02",
+                         "return_date": "2024-06-02"
+                    },
+                    {
+                         "user_id": [
+                              "Kiss Puista",
+                              83150
+                         ],
+                         "rental_date": "2024-06-24",
+                         "return_date": "2024-06-24"
+                    },
+                    {
+                         "user_id": [
+                              "Jack Marcell",
+                              47379
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    },
+                    {
+                         "user_id": [
+                              "Test Test",
+                              58014
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    },
+                    {
+                         "user_id": [
+                              "Test Test",
+                              96276
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    },
+                    {
+                         "user_id": [
+                              "Test Test",
+                              22846
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    },
+                    {
+                         "user_id": [
+                              "Test Test",
+                              65566
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    },
+                    {
+                         "user_id": [
+                              "Marton Mester",
+                              21382
+                         ],
+                         "rental_date": "2024-06-27",
+                         "return_date": "2024-06-27"
+                    }
+               ]
+          },
+          "9781400043324": {
+               "title": "The Da Vinci Code",
+               "author": "Dan Brown",
+               "author_nationality": "American",
+               "year_written": 2003,
+               "page_count": 454,
+               "category": "Mystery",
+               "languages": [
+                    "English",
+                    "French",
+                    "Spanish",
+                    "German"
+               ],
+               "availability": "available",
+               "rental_history": [
+                    {
+                         "user_id": [
+                              "Mester Marton",
+                              24681
+                         ],
+                         "rental_date": "2024-04-16",
+                         "return_date": "2024-06-02"
+                    },
+                    {
+                         "user_id": [
+                              "Test Test",
+                              16195
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    },
+                    {
+                         "user_id": [
+                              "Test Test",
+                              9618
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    }
+               ]
+          },
+          "9780547928227": {
+               "title": "The Hobbit",
+               "author": "J.R.R. Tolkien",
+               "author_nationality": "British",
+               "year_written": 1937,
+               "page_count": 310,
+               "category": "Fantasy",
+               "languages": [
+                    "English",
+                    "Hungarian"
+               ],
+               "availability": "available",
+               "rental_history": [
+                    {
+                         "user_id": [
+                              "Jack Sparrow",
+                              76165
+                         ],
+                         "rental_date": "2024-05-22",
+                         "return_date": "2024-06-02"
+                    },
+                    {
+                         "user_id": [
+                              "Test Test",
+                              37268
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    },
+                    {
+                         "user_id": [
+                              "Test Test",
+                              36870
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    },
+                    {
+                         "user_id": [
+                              "Test Test",
+                              34878
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    },
+                    {
+                         "user_id": [
+                              "Test Test",
+                              9411
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    }
+               ]
+          },
+          "9780385371980": {
+               "title": "The Fault in Our Stars",
+               "author": "John Green",
+               "author_nationality": "American",
+               "year_written": 2012,
+               "page_count": 313,
+               "category": "Young Adult",
+               "languages": [
+                    "English",
+                    "Spanish",
+                    "French",
+                    "German",
+                    "Hungarian"
+               ],
+               "availability": "available",
+               "rental_history": [
+                    {
+                         "user_id": [
+                              "Test Test",
+                              67248
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    },
+                    {
+                         "user_id": [
+                              "Test Test",
+                              22781
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    },
+                    {
+                         "user_id": [
+                              "Test Test",
+                              18207
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    },
+                    {
+                         "user_id": [
+                              "Test Test",
+                              11659
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    }
+               ]
+          },
+          "9780345816054": {
+               "title": "The Handmaid's Tale",
+               "author": "Margaret Atwood",
+               "author_nationality": "Canadian",
+               "year_written": 1985,
+               "page_count": 311,
+               "category": "Dystopian",
+               "languages": [
+                    "English",
+                    "Spanish",
+                    "French",
+                    "German"
+               ],
+               "availability": "available",
+               "rental_history": [
+                    {
+                         "user_id": [
+                              "Mester Mate",
+                              24682
+                         ],
+                         "rental_date": "2024-04-13",
+                         "return_date": "2024-06-02"
+                    },
+                    {
+                         "user_id": [
+                              "Test Test",
+                              31413
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    },
+                    {
+                         "user_id": [
+                              "Test Test",
+                              78264
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    },
+                    {
+                         "user_id": [
+                              "Test Test",
+                              64530
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    },
+                    {
+                         "user_id": [
+                              "Test Test",
+                              76725
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    }
+               ]
+          },
+          "9780142424179": {
+               "title": "The Maze Runner",
+               "author": "James Dashner",
+               "author_nationality": "American",
+               "year_written": 2009,
+               "page_count": 374,
+               "category": "Science Fiction",
+               "languages": [
+                    "English",
+                    "Spanish",
+                    "French",
+                    "German"
+               ],
+               "availability": "available",
+               "rental_history": [
+                    {
+                         "user_id": [
+                              "Test Test",
+                              23030
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    },
+                    {
+                         "user_id": [
+                              "Test Test",
+                              20118
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    },
+                    {
+                         "user_id": [
+                              "Test Test",
+                              24902
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    }
+               ]
+          },
+          "9780316346627": {
+               "title": "Gone Girl",
+               "author": "Gillian Flynn",
+               "author_nationality": "American",
+               "year_written": 2012,
+               "page_count": 415,
+               "category": "Thriller",
+               "languages": [
+                    "English",
+                    "French",
+                    "Spanish",
+                    "German"
+               ],
+               "availability": "available",
+               "rental_history": [
+                    {
+                         "user_id": [
+                              "Test Test",
+                              20868
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    },
+                    {
+                         "user_id": [
+                              "Test Test",
+                              33574
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    }
+               ]
+          },
+          "9780062315007": {
+               "title": "The Girl on the Train",
+               "author": "Paula Hawkins",
+               "author_nationality": "British",
+               "year_written": 2015,
+               "page_count": 323,
+               "category": "Thriller",
+               "languages": [
+                    "English",
+                    "French",
+                    "Spanish",
+                    "German"
+               ],
+               "availability": "rented",
+               "rental_history": [
+                    {
+                         "user_id": [
+                              "Hajnal Marcell",
+                              68546
+                         ],
+                         "rental_date": "2024-05-27",
+                         "return_date": null
+                    }
+               ]
+          },
+          "9780143132858": {
+               "title": "Educated: A Memoir",
+               "author": "Tara Westover",
+               "author_nationality": "American",
+               "year_written": 2018,
+               "page_count": 334,
+               "category": "Memoir",
+               "languages": [
+                    "English",
+                    "French",
+                    "Spanish",
+                    "German"
+               ],
+               "availability": "available",
+               "rental_history": [
+                    {
+                         "user_id": [
+                              "Jack Sparrow",
+                              93179
+                         ],
+                         "rental_date": "2024-05-27",
+                         "return_date": "2024-06-02"
+                    },
+                    {
+                         "user_id": [
+                              "Test Test",
+                              31594
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    },
+                    {
+                         "user_id": [
+                              "Test Test",
+                              3431
+                         ],
+                         "rental_date": "2024-06-27",
+                         "return_date": "2024-06-27"
+                    }
+               ]
+          },
+          "9780735219090": {
+               "title": "Little Fires Everywhere",
+               "author": "Celeste Ng",
+               "author_nationality": "American",
+               "year_written": 2017,
+               "page_count": 338,
+               "category": "Contemporary Fiction",
+               "languages": [
+                    "English",
+                    "French",
+                    "Spanish",
+                    "German"
+               ],
+               "availability": "available",
+               "rental_history": [
+                    {
+                         "user_id": [
+                              "Takacs Judit",
+                              21108
+                         ],
+                         "rental_date": "2024-05-27",
+                         "return_date": "2024-06-04"
+                    }
+               ]
+          },
+          "9780307277799": {
+               "title": "The Road",
+               "author": "Cormac McCarthy",
+               "author_nationality": "American",
+               "year_written": 2006,
+               "page_count": 287,
+               "category": "Post-Apocalyptic",
+               "languages": [
+                    "English",
+                    "French",
+                    "Spanish",
+                    "German"
+               ],
+               "availability": "available",
+               "rental_history": [
+                    {
+                         "user_id": [
+                              "Helly Berry",
+                              73734
+                         ],
+                         "rental_date": "2024-05-20",
+                         "return_date": "2024-06-02"
+                    },
+                    {
+                         "user_id": [
+                              "Test Test",
+                              48959
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    }
+               ]
+          },
+          "9780679783268": {
+               "title": "The Picture of Dorian Gray",
+               "author": "Oscar Wilde",
+               "author_nationality": "Irish",
+               "year_written": 1890,
+               "page_count": 254,
+               "category": "Gothic Fiction",
+               "languages": [
+                    "English",
+                    "French",
+                    "Spanish",
+                    "German"
+               ],
+               "availability": "available",
+               "rental_history": [
+                    {
+                         "user_id": [
+                              "Jack Sparrow",
+                              78063
+                         ],
+                         "rental_date": "2024-05-21",
+                         "return_date": "2024-06-02"
+                    },
+                    {
+                         "user_id": [
+                              "Test Test",
+                              85267
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    }
+               ]
+          },
+          "9780765378789": {
+               "title": "The Martian",
+               "author": "Andy Weir",
+               "author_nationality": "American",
+               "year_written": 2011,
+               "page_count": 369,
+               "category": "Science Fiction",
+               "languages": [
+                    "English",
+                    "French",
+                    "Spanish",
+                    "German"
+               ],
+               "availability": "available",
+               "rental_history": [
+                    {
+                         "user_id": [
+                              "Jack Sparrow",
+                              78063
+                         ],
+                         "rental_date": "2024-05-21",
+                         "return_date": "2024-06-02"
+                    },
+                    {
+                         "user_id": [
+                              "Test Test",
+                              92215
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    },
+                    {
+                         "user_id": [
+                              "Test Test",
+                              61705
+                         ],
+                         "rental_date": "2024-06-26",
+                         "return_date": "2024-06-26"
+                    }
+               ]
+          }
+     }
+}
