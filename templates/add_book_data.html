@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Book Database</title>
+</head>
+<body>
+    <h1>Admin: {{ admin_full_name }}</h1>
+    {% if warning %}
+        <p>{{ warning }}</p>
+    {% endif %}
+    <form action="/add_book_data" method="POST">
+        <h2>Add Book database</h2>
+        <label>ISBN number:</label><input type="text" id="isbn" name="isbn" placeholder="ISBN Number(required)" required><br>
+        <label>Title:</label><input type="text" id="title" name="title" placeholder="Title of the book(required)" required><br>
+        <label>Author:</label><input type="text" id="author" name="author" placeholder="Author of the book(required)" required><br>
+        <label>Author nationality:</label><input type="text" id="author_nationality" name="author_nationality" placeholder="(required)" required><br>
+        <label>Year of publication:</label><input type="text" id="year_written" name="year_written" placeholder="(required)" required><br>
+        <label>Page count:</label><input type="text" id="page_count" name="page_count" placeholder="Number of pages(required)" required><br>
+        <label>Book category:</label><input type="text" id="category" name="category" placeholder="only one(required)" required><br>
+        <label>Languages:</label><input type="text" id="languages" name="languages" placeholder="German,Hungarian,... (required)" required>
+        <input type="submit" value="Add">
+    </form>
+    <form action="/admin_login">
+       <input type="submit" value="Finish">
+    </form>
+</body>
+</html>

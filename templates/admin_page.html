@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+</head>
+<body>
+    <h1>Admin: {{ admin_full_name }}</h1>
+    <form id="searchForm" action="{{ url_for('admin_search') }}" method="POST">
+            <label for="searchInput">Search by:</label>
+            <select id="searchSelect" name="searchSelect">
+                <option value="title">Title</option>
+                <option value="author">Author</option>
+                <option value="author_nationality">Author nationality</option>
+                <option value="page_count">Minimum Pages</option>
+                <option value="category">Book genre</option>
+                <option value="languages">Languages</option>
+                <option value="isbn">ISBN</option>
+            </select>
+            <input type="text" id="searchInput" name="searchInput" placeholder="Enter search term...">
+            <input type="submit" value="Search">
+    </form>
+    <label>Book database</label><br>
+    <form action="/add_book_data" method="GET">
+        <input type="submit" value="Add">
+    </form>
+    <form action="/run_test" method="POST">
+        <input type="submit" value="Run Rent/Return Test">
+    </form>
+    <form action="/edit_book_data" method="GET">
+        <input type="submit" value="Edit">
+    {% if warning %}
+        <p>{{ warning }}</p>
+    <table>
+        <thead>
+        <tr>
+            <th>ISBN</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Author Nationality</th>
+            <th>Publication Year</th>
+            <th>Page Count</th>
+            <th>Category</th>
+            <th>Languages</th>
+            <th>Availability</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for isbn, book in books.items() %}
+        <tr class="{{ 'available' if book.availability == 'available' else 'unavailable' }}" style="background: {{ 'green' if book.availability == 'available' else 'red' }}">
+            <td>{{ isbn }}</td>
+            <td>{{ book.title }}</td>
+            <td>{{ book.author }}</td>
+            <td>{{ book.author_nationality }}</td>
+            <td>{{ book.year_written }}</td>
+            <td>{{ book.page_count }}</td>
+            <td>{{ book.category }}</td>
+            <td>{{ book.languages }}</td>
+            <td>{{ book.availability }}</td>
+            <td><input type="checkbox" name="selected_books[]" value="{{ isbn }}"></td>
+            <td>
+                <form action="{{ url_for('admin_login') }}" method="POST" style="display:inline;">
+                <input type="hidden" name="isbn" value="{{ isbn }}">
+                <input type="submit" name="function" value="Delete">
+            </form>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+    </form>
+</body>
+</html>

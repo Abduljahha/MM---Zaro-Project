@@ -1,0 +1,21 @@
+.header {
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Align items vertically */
+}
+
+.book-return-btn {
+    font-size: 2em; /* Set the font size to be equivalent to h1 */
+    padding: 5px 15px; /* Adjust padding as needed */
+    /* Add any additional styles you want for the button */
+}
+.input-group {
+    margin-bottom: 10px;
+}
+.separator {
+    text-align: center;
+    margin: 20px 0;
+}
+.note {
+    font-size: 0.9em;
+    color: #555;
+}

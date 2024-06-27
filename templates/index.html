@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Search</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Book Search</h1>
+            <form id="bookReturn" action="{{ url_for('return_book') }}" method="POST">
+                <button class="book-return-btn">Book Return</button>
+            </form>
+            <form id="adminLogin" action="{{ url_for('admin_login') }}" method="POST">
+                <button class="admin-btn">Admin</button>
+            </form>
+        </div>
+        <form id="searchForm" action="{{ url_for('search') }}" method="POST">
+            <label for="searchInput">Search by:</label>
+            <select id="searchSelect" name="searchSelect">
+                <option value="title">Title</option>
+                <option value="author">Author</option>
+                <option value="author_nationality">Author nationality</option>
+                <option value="page_count">Minimum Pages</option>
+                <option value="category">Book genre</option>
+                <option value="languages">Languages</option>
+                <option value="ISBN">ISBN</option>
+            </select>
+            <input type="text" id="searchInput" name="searchInput" placeholder="Enter search term...">
+            <input type="submit" value="Search">
+        </form>
+        <div class="search-results">
+            <h2>Search Results</h2>
+            <form id="selectForm" action="{{ url_for('process_selection') }}" method="POST">
+                {% if books %}
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Author</th>
+                                <th>Page Number</th>
+                                <th>ISBN</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for isbn, book in books.items() %}
+                                <tr class="{{ 'available' if book.availability == 'available' else 'unavailable' }}" style="background: {{ 'green' if book.availability == 'available' else 'red' }}">
+                                    <td>{{ book.title }}</td>
+                                    <td>{{ book.author }}</td>
+                                    <td>{{ book.page_count }}</td>
+                                    <td>{{ isbn }}</td>
+                                    {% if book.availability == "available" %}
+                                        <td><input type="checkbox" name="selected_books[]" value="{{ isbn }}"></td>
+                                    {% else %}
+                                        <td>Not Available</td>
+                                    {% endif %}
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    <button type="submit">Submit Selection</button>
+                {% elif warning %}
+                    <p>{{ warning }}</p>
+                {% else %}
+                    <p>waiting...</p>
+                {% endif %}
+            </form>
+        </div>
+        <div class="basket">
+            <h2>Basket</h2>
+            <ul id="basketList">
+                <!-- Selected books will be dynamically added here -->
+                {% for isbn, book in selected_books.items() %}
+                    <li>{{ book.title }} by {{ book.author }}</li>
+                {% endfor %}
+            </ul>
+            {% if selected_books %}
+                <form action="{{ url_for('rent_confirmation') }}">
+                    <button type="submit">Confirm Books</button>
+                </form>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

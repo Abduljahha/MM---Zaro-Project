@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Book Database</title>
+</head>
+<body>
+    <h1>Admin: {{ admin_full_name }}</h1>
+    {% if warning %}
+        <p>{{ warning }}</p>
+    {% endif %}
+    <form action="/edit_book_data" method="POST">
+        <h2>Edit Book Data and Rental History</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ISBN</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Author Nationality</th>
+                    <th>Publication Year</th>
+                    <th>Page Count</th>
+                    <th>Category</th>
+                    <th>Languages</th>
+                    <th>Availability</th>
+                    <th>Rent Information</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for isbn, book in selected_books.items() %}
+                <tr class="{{ 'available' if book.availability == 'available' else 'unavailable' }}">
+                    <td><input type="text" id="isbn" name="isbn[]" value="{{ isbn }}" placeholder="{{ isbn }}" required readonly></td>
+                    <td><input type="text" id="title" name="title[]" value="{{ book.title }}" placeholder="{{ book.title }}" required></td>
+                    <td><input type="text" id="author" name="author[]" value="{{ book.author }}" placeholder="{{ book.author }}" required></td>
+                    <td><input type="text" id="author_nationality" name="author_nationality[]" value="{{ book.author_nationality }}" placeholder="{{ book.author_nationality }}" required></td>
+                    <td><input type="text" id="year_written" name="year_written[]" value="{{ book.year_written }}" placeholder="{{ book.year_written }}" required></td>
+                    <td><input type="text" id="page_count" name="page_count[]" value="{{ book.page_count }}" placeholder="{{ book.page_count }}" required></td>
+                    <td><input type="text" id="category" name="category[]" value="{{ book.category }}" placeholder="{{ book.category }}" required></td>
+                    <td><input type="text" id="languages" name="languages[]" value="{{ (', '.join(book.languages)) }}" placeholder="{{ book.languages }}" required></td>
+                    <td><input type="text" id="availability" name="availability[]" value="{{ book.availability }}" placeholder="{{ book.availability }}" required></td>
+                    <td>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Order Number</th>
+                                    <th>Rent Date</th>
+                                    <th>Return Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for rental_history in book.rental_history %}
+                                <tr class="{{ 'available' if book.availability == 'available' else 'unavailable' }}">
+                                    <td><input type="text" id="rent_name" name="rent_name[]" value="{{ rental_history.user_id[0] }}" placeholder="{{ rental_history.user_id[0] }}" required></td>
+                                    <td><input type="text" id="rent_number" name="rent_number[]" value="{{ rental_history.user_id[1] }}" placeholder="{{ rental_history.user_id[1] }}" required></td>
+                                    <td><input type="text" id="rent_date" name="rent_date[]" value="{{ rental_history.rental_date }}" placeholder="{{ rental_history.rental_date }}" required></td>
+                                    <td><input type="text" id="return_date" name="return_date[]" value="{{ rental_history.return_date }}" placeholder="{{ rental_history.return_date }}" required></td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <input type="submit" value="Edit">
+    </form>
+    <form action="/admin_login">
+        <input type="submit" value="Finish">
+    </form>
+</body>
+</html>

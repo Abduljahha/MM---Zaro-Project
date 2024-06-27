@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation Form</title>
+</head>
+<body>
+    <h1>Confirmation</h1>
+    <form action="/" method="POST">
+        <label for="firstName">First Name:</label><br>
+        <input type="text" id="firstName" name="firstName" placeholder="First Name (Required)" required><br><br>
+
+        <label for="lastName">Last Name:</label><br>
+        <input type="text" id="lastName" name="lastName" placeholder="Last Name (Required)" required><br><br>
+
+        <label for="userNumber">Rent Number:</label><br>
+        <input type="text" id="userNumber" name="userNumber" value="{{ user_number }}"  required readonly>
+
+        <h2>Basket</h2>
+        <ul>
+            {% for isbn, book in selected_books.items() %}
+                <li>{{ book.title }} by {{ book.author }}</li>
+            {% endfor %}
+        </ul>
+        <input type="submit" value="Confirm Rent">
+    </form>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Return Book</title>
+</head>
+<body>
+    <h1>Return Book</h1>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    <form id="bookReturnConfirm" action="{{ url_for('return_confirmation') }}" method="POST">
+        <div class="input-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" placeholder="First Name (Optional)">
+        </div>
+        <div class="input-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Last Name (Optional)">
+        </div>
+        <div class="separator">
+            <span></span>
+        </div>
+        <div class="input-group">
+            <label for="userNumber">Rent Number</label>
+            <input type="text" id="userNumber" name="userNumber" placeholder="Enter Rent Number">
+        </div>
+        <div class="note">
+            <p>Provide either your name or your 5-digit rent number to return a book.</p>
+        </div>
+        <button type="submit">Confirm</button>
+    </form>
+    <form action="/" method="GET">
+    {% if confirm %}
+    <h2> {{ user_info }} </h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>ISBN</th>
+                <th>Rent Number</th>
+                <th>Rent Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for isbn, book in books.items() %}
+            <tr>
+                <td>{{ book.title }}</td>
+                <td>{{ book.author }}</td>
+                <td>{{ isbn }}</td>
+                <td>{{ book.rental_history[-1].user_id[-1] }}</td>
+                <td>{{ book.rental_history[-1].rental_date }}</td>
+                <td><input type="checkbox" name="selected_books[]" value="{{ isbn }}"></td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <button type="submit">Submit Selection</button>
+    {% else %}
+    <h3>{{ message }}</h3>
+    {% endif %}
+    </form>
+</body>
+</html>
